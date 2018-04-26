@@ -16,15 +16,15 @@ This new incarnation of CPS Schedule Share would have more powerful features, ha
 
 I started development of myScheduleShare.com at the beginning of 11th grade, and finished my first Beta version of the site a year later, in August, 2015.
 
-##Core Challenges
+## Core Challenges
 
-###Building a Calendar Engine from Scratch with More Features than Google Calendar
+### Building a Calendar Engine from Scratch with More Features than Google Calendar
 
-####Month View
+#### Month View
 ![Month View Image](Images/myschedulesharefullview.png)
-####Week View
+#### Week View
 ![Week View Image](Images/myscheduleshareweekview.png)
-####Day View
+#### Day View
 ![Day View Image](Images/myschedulesharedayview.png)
 
 The look and feel of myScheduleShare's Calendar was relatively easy to create - I used a free library called "FullCalendar" as the foundation, upon which I could program more powerful and flexible customizations using Javascript and CSS.
@@ -38,32 +38,32 @@ To solve this, I had to be a bit more creative when coming up with a database de
 
 myScheduleShare can handle every type of Event Google Calendar and Microsoft Outlook can handle, plus more complex types of events (like repeating at different times on different days).
 
-###Edit Event
+### Edit Event
 ![Edit Event Image](Images/editevent.png)
-####Recurring Events
-#####Weekly
+#### Recurring Events
+##### Weekly
 ![Weekly Image](Images/recurspopupweekly.png)
-#####Monthly
+##### Monthly
 ![Monthly Image](Images/recurspopupmonthly.png)
-#####Yearly
+##### Yearly
 ![Yearly Image](Images/recurspopupyearly.png)
 
 
-###Compare Schedules of Multiple Users, Side-By-Side
+### Compare Schedules of Multiple Users, Side-By-Side
 
 Another powerful feature of myScheduleShare is its ability to compare many users' schedules side-by-side, enabling a user to see when his/her friends are free, what classes others share, and what the best time to schedule a meeting would be.
 
 It took a while to implement code that efficiently fetched dozens of users' schedules at a time, then determined which Events they shared and color-coded them appropriately. I ended up having PHP send a JSON string to the user's browser, then having Javascript color code the Events with some fancy math and HTML and CSS tricks.
 
-####Week View
+#### Week View
 ![Week View](Images/compareschedulesfull.png)
-####Month View
+#### Month View
 ![Month View](Images/compareschedulesmonth.png)
-####Day View
+#### Day View
 ![Day View](Images/compareschedulesday.png)
 
 
-###Daily Snapshot of Friends' Schedules
+### Daily Snapshot of Friends' Schedules
 
 The "Friends Dashboard" feature allows a user to see his/her friends' schedule for today.
 
@@ -74,7 +74,7 @@ To solve this, I created an algorithm that "stacked" overlapping Events into two
 ![Friends Dashboard Image](Images/friendsdashboard.png)
 
 
-###Flexible Privacy Controls
+### Flexible Privacy Controls
 
 Privacy Controls were the final feature that I added before releasing myScheduleShare's Beta version. Being able to make an Event private, then Invite certain people to that Event and prohibit everyone else from viewing that Event was surprisingly hard to program. Every time an Event was fetched from the database, it had to have its "visibility" checked, to ensure that the Privacy Controls put on that Event were being followed.
 
@@ -83,17 +83,17 @@ The most difficult implementation of Privacy Controls was in the "Compare Schedu
 ![Invite Others Image](Images/editeventinvited.png)
 
 
-###Dashboards
-#####Homework Log
+### Dashboards
+##### Homework Log
 ![Homework Log Image](Images/homeworklog.png)
 
-###Edit Profile
+### Edit Profile
 ![Edit Profile Image](Images/editprofile.png)
 
-###Event View
+### Event View
 ![Event View Image](Images/eventview.png)
 
-###Sign Up Page
+### Sign Up Page
 ![Sign Up Image](Images/registerfull.png)
 
 
